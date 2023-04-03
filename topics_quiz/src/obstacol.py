@@ -29,22 +29,22 @@ class LaserScanSubscriber:
             twist_msg = Twist()
             twist_msg.linear.x = 0.5
             self.vel_pub.publish(twist_msg)
-        if right_range < 1:
-            twist_msg = Twist()
-            twist_msg.angular.z = 0.5
-            self.vel_pub.publish(twist_msg)
-        else:
-            twist_msg = Twist()
-            twist_msg.linear.x = 0.5
-            self.vel_pub.publish(twist_msg)
-        if left_range < 1:
-            twist_msg = Twist()
-            twist_msg.angular.z = -0.5
-            self.vel_pub.publish(twist_msg)
-        else:
-            twist_msg = Twist()
-            twist_msg.linear.x = 0.5
-            self.vel_pub.publish(twist_msg)
+            if right_range < 1:
+                twist_msg = Twist()
+                twist_msg.angular.z = 0.5
+                self.vel_pub.publish(twist_msg)
+            else:
+                twist_msg = Twist()
+                twist_msg.linear.x = 0.5
+                self.vel_pub.publish(twist_msg)
+                if left_range < 1:
+                    twist_msg = Twist()
+                    twist_msg.angular.z = -0.5
+                    self.vel_pub.publish(twist_msg)
+                else:
+                    twist_msg = Twist()
+                    twist_msg.linear.x = 0.5
+                    self.vel_pub.publish(twist_msg)
 
 
 rospy.init_node('laser_scan_subscriber')
