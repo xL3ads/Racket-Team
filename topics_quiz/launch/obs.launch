@@ -1,4 +1,4 @@
 <launch>
-<node pkg="topics_quiz" type="obstacol_publisher.py" name="obs"  output="screen">
+<node pkg="topics_quiz" type="obstacol.py" name="obs"  output="screen">
 </node>
 </launch>
