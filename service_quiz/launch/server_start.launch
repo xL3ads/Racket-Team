@@ -1,0 +1,3 @@
+<launch>
+    <node name="server_start" pkg="service_quiz" type="service_server.py" output="screen"/>
+</launch>

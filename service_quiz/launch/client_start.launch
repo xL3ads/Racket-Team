@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find service_quiz)/launch/server_start.launch" />
+    <node name="client_start" pkg="service_quiz" type="service_client.py" output="screen"/>
+</launch>
